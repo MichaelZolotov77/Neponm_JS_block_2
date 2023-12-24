@@ -1,14 +1,15 @@
-let tries = 0;
-while (tries < 3) {
-  const age = +prompt("Сколько вам лет");
+const numbers = [1, 2, 2, 13, 11, 7, 20, 22, 14, 15];
 
-  if (age) {
-    alert("Welcome");
-    break;
+function mainCode(numbers) {
+  const evenNumbers = [];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 0) {
+      evenNumbers.push(numbers[i]);
+      if (evenNumbers.length === 3) break;
+    }
   }
 
-  tries++;
-  alert("Данные введены некорректно");
+  return evenNumbers;
 }
 
-alert("End");
+console.log(mainCode(numbers));
