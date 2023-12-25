@@ -35,22 +35,15 @@
       var tries = 0;
 
       function guessNum(num) {
-        console.log(secretNum);
-        console.log(tries);
-        if (tries < 5) {
-          if (num === secretNum) {
-            alert("Угадал, противный!");
-            tries = 5;
-          } else if (tries == 4) {
-            alert("Это была последняя попытка");
-          } else {
-            alert("Не угадал, попробуй еще раз!");
-          }
+        if (tries >= 5) return alert("Игра окончена");
+        if (num === secretNum) {
+          alert("Вы угадали");
+          tries = 5;
+        } else {
+          alert("Вы не угадали");
           tries++;
         }
       }
-
-      console.log("end");
     </script>
   </body>
 </html>
